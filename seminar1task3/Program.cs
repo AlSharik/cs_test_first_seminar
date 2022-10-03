@@ -1,4 +1,5 @@
-﻿int Prompt( )
+﻿/*
+int Prompt( )
 {
     Console.WriteLine("Write number >");
     string inputString = Console.ReadLine();
@@ -33,4 +34,18 @@ switch(day)
     default:
         System.Console.WriteLine("Такого дня недели не существует");
         break;
+}
+*/
+
+Console.WriteLine("Write number day of the week");
+int day = Convert.ToInt32(Console.ReadLine());
+//int day = int.Parse(Console.ReadLine());
+string [] days = {"Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"};
+if( day >= 1 && day <= 7)
+{
+    System.Console.WriteLine(days[day-1]);
+}
+else
+{
+    System.Console.WriteLine("Такого дня недели не существует");
 }
